@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /**********************/
@@ -33,10 +33,21 @@ body {
 
 img {
     vertical-align: middle !important;
-    height: 50vh !important;
-    width: 50vw;
+    height: 60vh !important;
+    width: 49.5vw;
     margin: 0;
     padding: 0%;
     display: block !important;
     float: left !important;
+}
+
+img::after {
+    content: "";
+    background-color: black !important;
+    width: 100%;
+}
+
+img:hover{
+    opacity: 0.5;
+    cursor: pointer;
 }
