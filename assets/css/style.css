@@ -10,6 +10,7 @@ body {
     justify-content: center !important;
     background-image: url(../images/food.jpeg) !important;
     background-repeat: no-repeat;
+    background-position: top;
     min-width: 100%; 
     min-height: 100%;  
 }
@@ -48,6 +49,8 @@ body {
 .input {
     padding: .5%;
     width: 40% !important;
+    opacity: 0.8;
+    box-shadow: 1px 2px 8px 2px grey !important;
 }
 
 .control a .fa {
