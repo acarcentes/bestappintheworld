@@ -1,6 +1,3 @@
-
-
-
 // API KEY
 var apiKey = "9068da564emsh698c065ea958fa5p1c6c9djsn29907d4815c5"
 
@@ -37,6 +34,5 @@ $("button").on("click", function(event){
     // $.ajax(settings).done(function (response) {
     //   console.log(response);
     // });
-    
-      
+        
 })
