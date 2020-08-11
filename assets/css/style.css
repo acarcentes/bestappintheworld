@@ -53,16 +53,16 @@ body {
     box-shadow: 1px 2px 8px 2px grey !important;
 }
 
-.control a .fa {
+.control p {
     font-size: 20px;
     text-decoration: none;
     color: black;
     position: absolute;
     right: 30.5%;
-    margin-top: -1.2% !important;
+    margin-top: 0% !important;
 }
 
-.control .fa:hover {
+.control p:hover {
     cursor: pointer;
 }
 
