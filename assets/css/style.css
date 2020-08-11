@@ -67,5 +67,15 @@ body {
 }
 
 /**********************/
+/* footer */
+/**********************/
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: .5%;
+    color: white;
+}
+
+/**********************/
 /* media queries */
 /**********************/
