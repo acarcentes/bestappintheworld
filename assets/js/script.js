@@ -13,4 +13,4 @@ $(searchButton).on("click", function(event){
     localStorage.setItem("city", city);
 
     location.replace("categories.html");
-});
+});     

@@ -1,4 +1,5 @@
 // 1. have to get the city input from index.html
+    // var city = localStorage.getItem("city"); 
 // 2. convert the city input into latitude and longitude coordinates for google maps api
 // 3. convert that for google places OR maybe for another restaurant finding app
 // 4. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
@@ -18,5 +19,6 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
 
-    console.log(response);        
+    console.log(response);  
+    
   })
