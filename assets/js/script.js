@@ -19,10 +19,8 @@ $(searchButton).on("click", function (event) {
 });
 
 // longitude & lattitude locations
-var bl_latitude = "11.847676";
-var bl_longitude = "109.095887";
-var tr_latitude = "12.838442";
-var tr_longitude = "109.149359";
+var latitude = "12.91285";
+var longitude = "100.87808";
 
 // Converts the city location into longitude and lattitude positions
 function getLatLngLocations(city) {}
@@ -30,28 +28,21 @@ function getLatLngLocations(city) {}
 // Gets the list of restaurants upto 30 based on location
 function getRestaurants() {
   var settings = {
-    async: true,
-    crossDomain: true,
     url:
-      "https://tripadvisor1.p.rapidapi.com/restaurants/list-in-boundary?lunit=km&restaurant_tagcategory=10591&limit=30&currency=USD&restaurant_tagcategory_standalone=10591&lang=en_US&bl_latitude=" +
-      bl_latitude +
-      "&bl_longitude=" +
-      bl_longitude +
-      "&tr_latitude=" +
-      tr_latitude +
-      "&tr_longitude=" +
-      tr_longitude,
+      "https://tripadvisor1.p.rapidapi.com/restaurants/list-by-latlng?limit=30&currency=USD&distance=2&lunit=km&lang=en_US&latitude=" +
+      latitude +
+      "&longitude=" +
+      longitude,
     method: "GET",
     headers: {
-      "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
       "x-rapidapi-key": "569c506913msh97bb985d6e98504p1b3ad2jsnb268e32c19d8",
     },
   };
 
+  // Ajax call back function on query response
   $.ajax(settings).done(function (response) {
-    // console.log(response);
     for (var i = 0; i < response.data.length; i++) {
-      if (response.data[i] != undefined) {
+      if (response.data[i] != undefined && response.data[i].name != undefined) {
         console.log(response.data[i].name);
       }
     }
