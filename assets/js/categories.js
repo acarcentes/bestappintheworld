@@ -1,4 +1,5 @@
 // 1. have to get the city input from index.html
+// made city input global 
 var city = localStorage.getItem("city");
 // 2. convert the city input into latitude and longitude coordinates for google maps api
 // 3. convert that for google places OR maybe for another restaurant finding app
@@ -32,8 +33,8 @@ var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
 //////////////////
 // UPDATED CITY SEARCH VALUE  
 //////////////////
-$("#search-btn").click(function(){
-  // var city = $("#search").val().trim();
+$("#search").click(function(){
+  var city = $("#city").val().trim();
   localStorage.setItem("city", city)
 
   location.replace("categories.html");
