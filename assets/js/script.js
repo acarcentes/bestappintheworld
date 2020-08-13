@@ -13,9 +13,7 @@ $(searchButton).on("click", function (event) {
   localStorage.setItem("city", city);
 
   location.replace("categories.html");
-
-  getLatLngLocations(city);
-  getRestaurants();
+  
 });
 
 // longitude & lattitude locations
