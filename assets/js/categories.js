@@ -2,51 +2,64 @@
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
-var city = localStorage.getItem("city");
+// var city = localStorage.getItem("city");
 
-function getCity() {
-  console.log(city);
+var lat = localStorage.getItem("lat", lat);
+var lng = localStorage.getItem("lng", lng);
+
+function getCityCor() {
+  console.log(lat);
+  console.log(lng)
 }
 
-getCity();
+getCityCor();
 
-// 2. convert the city input into latitude and longitude coordinates for google places api
 //////////////////
-// GEOCODING API
+// Google Places API
 //////////////////////
+
 var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
 
-var geoCodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&key="+googleApiKey
+function googlePlaces(foodType) {
+  var googlePlacesUrl =
+"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=1500&type=restaurant&keyword=cruise&key="+
+googleApiKey;
 
 $.ajax({
-  url: geoCodingUrl,
-  method: "GET",
+url: googlePlacesUrl,
+method: "GET",
 }).then(function (response) {
   console.log(response);
-  console.log(response.results[0].geometry.location);
-  // console.log(response.results[0].geometry.location.lat);
-  var lat = response.results[0].geometry.location.lat;
-  console.log(lat);
-  // console.log(response.results[0].geometry.location.lng);
-  var lng = response.results[0].geometry.location.lng;
-  console.log(lng);
 
-  // Google Places API
-  var googlePlacesUrl =
-  "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=1500&type=restaurant&keyword=cruise&key="+
-  googleApiKey;
+  if (foodType == "breakfast") {
+    console.log("yaasss");
 
-  $.ajax({
-  url: googlePlacesUrl,
-  method: "GET",
-  }).then(function (response) {
-    console.log(response);
-  });
+    var breakfastArray = [
+      "restaurant", "nightclub"
+    ]
+  }
 
-  $("#breakfast").on("click", function(){
-    console.log("hello");
-  });
-  
+  if (foodType == "lunch") {
+    console.log("yaass")
+  }
+
+  if (foodType == "dinner") {
+    console.log("yaass")
+  }
+
+  if (foodType == "dessert") {
+    console.log("yaass")
+  }
+});
+}
+
+// if types(from data array) is equal to the breakfast array elements make a for loop if type = breakfastArray[i] then display 
+
+$(".container").on("click", function(){
+  var id = this.id.toString();
+  googlePlaces(id);
+
+  console.log(id);
 });
 
 // 3. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
