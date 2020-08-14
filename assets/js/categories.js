@@ -4,12 +4,12 @@
 // 3. convert that for google places OR maybe for another restaurant finding app
 // 4. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
 // 5. when you click one of the filtered selections it takes you to that pages html
-
+$("button").on("click", function () {
 //////////////////
 // GOOGLE MAPS/PLACES API KEY
 ////////////////////// 
 
-var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8"
+var googleApiKey = "AIzaSyDnpaYK4kBtFyLgGbFCAhZZ3VrPajOTblo"
 
 var googleMapsUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key="+googleApiKey
 
