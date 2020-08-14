@@ -1,0 +1,1 @@
+// if business is temporarily closed don't display it

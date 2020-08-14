@@ -31,3 +31,16 @@ function getRestaurants() {
 
 getLatLngLocations(city);
 getRestaurants();
+
+trip advisor api
+// var rapidApiKey = "9068da564emsh698c065ea958fa5p1c6c9djsn29907d4815c5"
+
+// var tripAdvisorUrl = "https://tripadvisor1.p.rapidapi.com/restaurants/get-details?location_id=2233968&lang=en_US&currency=USD&key="+rapidApiKey
+
+// $.ajax({
+//   url: tripAdvisorUrl,
+//   method: "GET",
+// }).then(function(response){
+//   console.log(response)
+
+// })
