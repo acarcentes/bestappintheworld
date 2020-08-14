@@ -31,7 +31,6 @@ $.ajax({
   var lng = response.results[0].geometry.location.lng;
   console.log(lng);
 
-
   // Google Places API
   var googlePlacesUrl =
   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=1500&type=restaurant&keyword=cruise&key="+
@@ -46,24 +45,13 @@ $.ajax({
 
 });
 
-// var rapidApiKey = "9068da564emsh698c065ea958fa5p1c6c9djsn29907d4815c5"
+// 3. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
+// filter if the business is operational
+  // if type of restaurant is a bar or food place it under dinner
+  // if type of restaurant is food place under lunch
+// 4. when you click one of the filtered selections it takes you to that pages html
 
-// var tripAdvisorUrl = "https://tripadvisor1.p.rapidapi.com/restaurants/get-details?location_id=2233968&lang=en_US&currency=USD&key="+rapidApiKey
-
-// $.ajax({
-//   url: tripAdvisorUrl,
-//   method: "GET",
-// }).then(function(response){
-//   console.log(response)
-
-// })
-
-
-// 3. convert that for google places OR maybe for another restaurant finding app
-// 4. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
-// 5. when you click one of the filtered selections it takes you to that pages html
-
-// 6. make a search bar so the user can update their city input if they want
+// 5. make a search bar so the user can update their city input if they want
 //////////////////
 // UPDATED CITY SEARCH VALUE
 //////////////////
