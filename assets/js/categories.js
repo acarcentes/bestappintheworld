@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 1. have to get the city input from index.html
 // var city = localStorage.getItem("city");
 // 2. convert the city input into latitude and longitude coordinates for google maps api
@@ -5,6 +6,9 @@
 // 4. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
 // 5. when you click one of the filtered selections it takes you to that pages html
 
+=======
+//1. have to get the city input from index.html
+>>>>>>> 488f7ec278789ba513f2fb198b6e748128f53a24
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
@@ -36,7 +40,11 @@ var lunchRestaurants = new Array();
 var dinnerRestaurants = new Array();
 var dessertRestaurants = new Array();
 
+<<<<<<< HEAD
 // 2. convert the city input into latitude and longitude coordinates for google places api
+=======
+//2. input latitude and longitude into google place api 
+>>>>>>> 488f7ec278789ba513f2fb198b6e748128f53a24
 //////////////////
 // GEOCODING API
 //////////////////////
