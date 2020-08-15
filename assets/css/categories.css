@@ -23,70 +23,8 @@
 /**********************/
 /* image grid */
 /**********************/
-.grid-container {
-    position: relative;
-    max-width: 100% !important;
-    padding: 0% !important;
-    margin: 0%;
-    display: flex;
-    flex-wrap: wrap;
-    /* vertical-align: middle !important; */
-}
 
-.container {
-    position: relative !important;
-    align-items: center;
-    text-align: center;
-    float: left !important;
-    vertical-align: middle !important;
-    max-width: 100% !important;
-    display: flex;
-    flex-wrap: wrap;
-}
-    
-.image {
-    display: block !important;
-    height: 500px;
-    /* vertical-align: middle !important; */
-    width: 741.5px; 
-    /* min-width: 50% !important; */
-    /* float: left !important; */
-}
-
-.hover {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    height: 500px;
-    width: 100%;
-    opacity: 0.94;
-    transition: .5s ease;
-    background-color: black;
-} 
-
-.words {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.web {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    z-index: 3;
-}
-
-.container:hover .hover {
-    display: none;
-}
-
-.image:hover {
+.cell:hover {
     cursor: pointer;
+    opacity: 0.5;
 }

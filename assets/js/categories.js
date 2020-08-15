@@ -76,7 +76,7 @@ $.ajax({
 
 // if foodTypes(from data array) is equal to the breakfast array elements make a for loop if type = breakfastArray[i] then display 
 
-$(".container").on("click", function(){
+$(".cell").on("click", function(){
   var id = this.id.toString();
   googlePlaces(id);
 
@@ -91,6 +91,7 @@ $(".container").on("click", function(){
 
 // 4. when you click one of the filtered selections it takes you to that pages html
 // 5. make a search bar so the user can update their city input if they want
+
 //////////////////
 // UPDATED CITY SEARCH VALUE
 //////////////////
