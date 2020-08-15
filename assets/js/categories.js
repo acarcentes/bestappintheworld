@@ -1,4 +1,4 @@
-// have to get the city input from index.html
+//1. have to get the city input from index.html
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
@@ -30,7 +30,7 @@ var lunchRestaurants = new Array();
 var dinnerRestaurants = new Array();
 var dessertRestaurants = new Array();
 
-// input latitude and longitude into google place api 
+//2. input latitude and longitude into google place api 
 //////////////////
 // Google Places API
 //////////////////////
