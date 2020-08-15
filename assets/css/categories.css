@@ -36,6 +36,7 @@
     align-items: center;
     text-align: center;
     float: left;
+    max-width: 100%;
 }
     
 .image {
