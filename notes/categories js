@@ -205,7 +205,6 @@ method: "GET",
 
   console.log(response);
 
-<<<<<<< HEAD
   if (foodType == "breakfast") {
     console.log("yaasss");
 
@@ -235,7 +234,8 @@ $(".container").on("click", function(){
   googlePlaces(id);
 
   console.log(id);
-=======
+
+
   // Google Places API
   var googlePlacesUrl =
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -342,7 +342,6 @@ $(".container").on("click", function(){
       // breatFastRestaurants.openNow
       // breakFastRestaurants.locationImage
 
-      //////////////////////////////////////
     }
   });
 
@@ -356,7 +355,6 @@ $(".container").on("click", function(){
       console.log(lunchRestaurants[i]);
       // Create HTML components from the breatfast restaurants object array
 
-      //////////////////////////////////////
     }
   });
 
@@ -372,7 +370,6 @@ $(".container").on("click", function(){
       console.log(dinnerRestaurants[i]);
       // Create HTML components from the breatfast restaurants object array
 
-      //////////////////////////////////////
     }
   });
 
@@ -386,8 +383,7 @@ $(".container").on("click", function(){
 
     for (var i = 0; i < dessertRestaurants.length; i++) {
       console.log(dessertRestaurants[i]);
-      // Create HTML components from the breatfast restaurants object array
+      // Create HTML components from the breakfast restaurants object array
 
-      //////////////////////////////////////
     }
   });
