@@ -24,27 +24,20 @@
 /* image grid */
 /**********************/
 .grid-container {
-<<<<<<< HEAD
-  position: relative !important;
-  max-width: 100% !important;
-  padding: 0% !important;
-  margin: 0%;
-  vertical-align: middle !important;
-=======
     position: relative;
     max-width: 100% !important;
     padding: 0% !important;
     margin: 0%;
     /* vertical-align: middle !important; */
->>>>>>> 488f7ec278789ba513f2fb198b6e748128f53a24
 }
 
 .container {
-  position: relative !important;
-  align-items: center !important;
-  text-align: center !important;
-  float: left !important;
-  max-width: 100% !important;
+    position: relative !important;
+    align-items: center;
+    text-align: center;
+    float: left !important;
+    vertical-align: middle !important;
+    max-width: 100% !important;
 }
 
 .image {
@@ -55,6 +48,7 @@
 =======
     display: block !important;
     height: 500px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 741.5px !important; 
 >>>>>>> 9a0f6760605572d4187ca8d824bf3bfb9cb4035c
@@ -75,8 +69,12 @@
 =======
     /* vertical-align: middle !important; */
     /* width: 741.5px !important;  */
+=======
+    vertical-align: middle !important;
+    width: 741.5px; 
+>>>>>>> af877cc3e3c73ca2c10109a7827b696d68d44de4
     /* min-width: 50% !important; */
-    float: left !important;
+    /* float: left !important; */
 }
 
 .hover {
@@ -86,7 +84,7 @@
     right: 0;
     height: 100%;
     height: 500px;
-    width: 50%;
+    width: 100%;
     opacity: 0.94;
     transition: .5s ease;
     background-color: black;
