@@ -41,7 +41,8 @@ $(searchButton).on("click", function (event) {
 
     localStorage.setItem("lat", lat);
     localStorage.setItem("lng", lng);
+    location.replace("categories.html");
   });
 
-  location.replace("categories.html");
+  
 });
