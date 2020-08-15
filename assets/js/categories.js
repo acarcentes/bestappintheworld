@@ -1,13 +1,10 @@
 // 1. have to get the city input from index.html
-<<<<<<< HEAD
     // var city = localStorage.getItem("city"); 
 // 2. convert the city input into latitude and longitude coordinates for google maps api
 // 3. convert that for google places OR maybe for another restaurant finding app
 // 4. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
 // 5. when you click one of the filtered selections it takes you to that pages html
 $("button").on("click", function () {
-=======
->>>>>>> 639252e9e5350b9bcfa62f3370ba97ee6477d915
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
@@ -17,11 +14,7 @@ function getCity() {
   console.log(city);
 }
 
-<<<<<<< HEAD
 var googleApiKey = "AIzaSyDnpaYK4kBtFyLgGbFCAhZZ3VrPajOTblo"
-=======
-getCity();
->>>>>>> 639252e9e5350b9bcfa62f3370ba97ee6477d915
 
 // Restaurant object with properties
 var restaurantObj = [
