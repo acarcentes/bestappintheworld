@@ -1,11 +1,8 @@
-// variable place holder for loader
+// LOADER
 var loader = document.querySelector(".loader-wrapper");
-
-// while the page loads the loader icon will display
-$(window).on("load", function(){
-    // $("body").css({"overflow": "hidden"});
-    $(loader).fadeOut("slow");
- });
+$(window).on("load", function () {
+  $(loader).fadeOut("slow");
+});
 
 //1. have to get the city input from index.html
 //////////////////
@@ -94,9 +91,9 @@ function googlePlaces(foodType) {
   });
 }
 
-// if foodTypes(from data array) is equal to the breakfast array elements make a for loop if type = breakfastArray[i] then display 
+// if foodTypes(from data array) is equal to the breakfast array elements make a for loop if type = breakfastArray[i] then display
 
-$(".cell").on("click", function(){
+$(".cell").on("click", function () {
   var id = this.id.toString();
   googlePlaces(id);
   console.log(id);
