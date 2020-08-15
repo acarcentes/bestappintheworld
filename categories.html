@@ -6,6 +6,9 @@
     
     <link rel="stylesheet" type="text/css" href="./assets/css/categories.css">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
     <!-- Foundation Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
@@ -22,6 +25,14 @@
         <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
         </span>
         <a class="topbar-responsive-logo" href="index.html"><strong>Food Finder</strong></a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <input type="search" placeholder="City..." id="city">
+        <p class="fa fa-search" id="search"></p>
+        <!-- <li><input type="search" placeholder="Search" id="city"></li> -->
+        <!-- <li><button type="button" class="button" id="search">Search</button></li> -->
+      </ul>
     </div>
   </nav>
     
@@ -72,6 +83,9 @@
       </div>
   </div>
 </div>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="./assets/js/categories.js"></script>
 </body>

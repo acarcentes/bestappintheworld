@@ -16,6 +16,10 @@
     vertical-align: middle;
 }
 
+#search:hover {
+    cursor: pointer;
+}
+
 /**********************/
 /* image grid */
 /**********************/
@@ -72,4 +76,8 @@ width: 741.5px;
 
 .container:hover .hover {
     display: none;
+}
+
+.image:hover {
+    cursor: pointer;
 }
