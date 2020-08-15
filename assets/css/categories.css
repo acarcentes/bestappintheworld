@@ -40,9 +40,15 @@
 }
 
 .image {
+<<<<<<< HEAD
   display: block !important;
   height: 500px !important;
   width: 741.5px !important;
+=======
+    display: block !important;
+    height: 500px;
+    width: 741.5px !important; 
+>>>>>>> 9a0f6760605572d4187ca8d824bf3bfb9cb4035c
 }
 
 .hover {

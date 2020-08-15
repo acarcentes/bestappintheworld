@@ -8,10 +8,19 @@ $("button").on("click", function () {
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
+<<<<<<< HEAD
 var city = localStorage.getItem("city");
 
 function getCity() {
   console.log(city);
+=======
+var lat = localStorage.getItem("lat", lat);
+var lng = localStorage.getItem("lng", lng);
+
+function getCityCor() {
+  console.log(lat);
+  console.log(lng)
+>>>>>>> 9a0f6760605572d4187ca8d824bf3bfb9cb4035c
 }
 
 var googleApiKey = "AIzaSyDnpaYK4kBtFyLgGbFCAhZZ3VrPajOTblo"
@@ -47,7 +56,11 @@ var geoCodingUrl =
   googleApiKey;
 
 $.ajax({
+<<<<<<< HEAD
   url: geoCodingUrl,
+=======
+  url: googlePlacesUrl,
+>>>>>>> 9a0f6760605572d4187ca8d824bf3bfb9cb4035c
   method: "GET",
 }).then(function (response) {
   //Clear the restaurants object arrays
