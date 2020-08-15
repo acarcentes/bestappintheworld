@@ -9,16 +9,22 @@ var searchButton = $("#search-button");
 //////////////////
 $(searchButton).on("click", function (event) {
   event.preventDefault();
+  // console.log("somethingsilly");
   var city = $(".input").val().trim();
+
   // localStorage.setItem("city", city);
 
-// convert the city input into latitude and longitude coordinates for google places api
-//////////////////
-// GEOCODING API
-//////////////////////
+  // convert the city input into latitude and longitude coordinates for google places api
+  //////////////////
+  // GEOCODING API
+  //////////////////////
   var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
 
-  var geoCodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&key="+googleApiKey
+  var geoCodingUrl =
+    "https://maps.googleapis.com/maps/api/geocode/json?address=" +
+    city +
+    "&key=" +
+    googleApiKey;
 
   $.ajax({
     url: geoCodingUrl,
@@ -35,10 +41,8 @@ $(searchButton).on("click", function (event) {
 
     localStorage.setItem("lat", lat);
     localStorage.setItem("lng", lng);
-
+    location.replace("categories.html");
   });
 
-  location.replace("categories.html");
-
+  
 });
-

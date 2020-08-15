@@ -1,29 +1,28 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /**********************/
 /* navbar */
 /**********************/
 .top-bar {
-    background-color: black !important;
+  background-color: black !important;
 }
-  
+
 .topbar-responsive .topbar-responsive-logo {
-    color: #fefefe;
-    vertical-align: middle;
+  color: #fefefe;
+  vertical-align: middle;
 }
 
 #search:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /**********************/
 /* image grid */
 /**********************/
-
 .cell:hover {
     cursor: pointer;
     opacity: 0.5;
