@@ -24,12 +24,6 @@ var restaurantObj = [
   }
 ];
 
-// Different types of restaurant arrays
-var breakfastRestaurants = new Array();
-var lunchRestaurants = new Array();
-var dinnerRestaurants = new Array();
-var dessertRestaurants = new Array();
-
 //2. input latitude and longitude into google place api 
 //////////////////
 // Google Places API
@@ -47,28 +41,31 @@ $.ajax({
   url: googlePlacesUrl,
   method: "GET",
 }).then(function (response) {
-  //Clear the restaurants object arrays
-  breakFastRestaurants.length = 0;
-  lunchRestaurants.length = 0;
-  dinnerRestaurants.length = 0;
-  dessertRestaurants.length = 0;
-
+ 
   console.log(response);
 
   if (foodType == "breakfast") {
     console.log("breakfast");
 
-    // var breakfastArray = [
-    //   "restaurant", "nightclub"
-    // ]
+    var breakfastArray = [
+      "restaurant", "food"
+    ]
   }
 
   if (foodType == "lunch") {
     console.log("lunch")
+
+    var lunchArray = [
+      "restaurant", "food"
+    ]
   }
 
   if (foodType == "dinner") {
     console.log("dinner")
+
+    var dinnerArray = [
+      "restaurant", "nightclub", "bar"
+    ]
   }
 
   if (foodType == "dessert") {
