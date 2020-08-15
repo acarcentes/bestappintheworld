@@ -27,12 +27,11 @@ $(searchButton).on("click", function (event) {
     url: geoCodingUrl,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    // console.log(response);
     console.log(response.results[0].geometry.location);
-    // console.log(response.results[0].geometry.location.lat);
     var lat = response.results[0].geometry.location.lat;
+    
     console.log(lat);
-    // console.log(response.results[0].geometry.location.lng);
     var lng = response.results[0].geometry.location.lng;
     console.log(lng);
 

@@ -56,17 +56,20 @@ function googlePlaces(foodType) {
     if (foodType == "lunch") {
       console.log("lunch");
 
-      var lunchArray = ["restaurant", "food"];
+      var lunchArray = ["restaurant", "food", "establishment", "store"];
     }
 
     if (foodType == "dinner") {
       console.log("dinner");
 
-      var dinnerArray = ["restaurant", "nightclub", "bar"];
+      var dinnerArray = ["restaurant", "nightclub", "bar", "store"];
     }
 
     if (foodType == "dessert") {
       console.log("dessert");
+
+      var dessertArray = ["restaurant", "bakery", "cafe"];
+
     }
   });
 }
