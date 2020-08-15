@@ -42,5 +42,4 @@ $(searchButton).on("click", function (event) {
     localStorage.setItem("lng", lng);
     location.replace("categories.html");
   });
-
 });
