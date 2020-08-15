@@ -23,6 +23,7 @@
 /**********************/
 /* image grid */
 /**********************/
+<<<<<<< HEAD
 .grid-container {
   position: relative;
   max-width: 100% !important;
@@ -82,3 +83,9 @@
 .image:hover {
   cursor: pointer;
 }
+=======
+.cell:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+>>>>>>> e4390b52f4598e184b8b3ad627a21a0c0945ab01
