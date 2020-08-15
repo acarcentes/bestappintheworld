@@ -24,6 +24,7 @@
 /* image grid */
 /**********************/
 .grid-container {
+<<<<<<< HEAD
   position: relative;
   max-width: 100% !important;
   padding: 0% !important;
@@ -38,12 +39,41 @@
   float: left !important;
   vertical-align: middle !important;
   max-width: 100% !important;
+=======
+    position: relative;
+    max-width: 100% !important;
+    padding: 0% !important;
+    margin: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    /* vertical-align: middle !important; */
+}
+
+.container {
+    position: relative !important;
+    align-items: center;
+    text-align: center;
+    float: left !important;
+    vertical-align: middle !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+>>>>>>> 73ff6eb1364ba96ff66ea87f881e121f4ab61edb
 }
 
 .image {
+<<<<<<< HEAD
   display: block !important;
   height: 500px !important;
   width: 741.5px !important;
+=======
+    display: block !important;
+    height: 500px;
+    /* vertical-align: middle !important; */
+    width: 741.5px; 
+    /* min-width: 50% !important; */
+    /* float: left !important; */
+>>>>>>> 73ff6eb1364ba96ff66ea87f881e121f4ab61edb
 }
 
 .hover {

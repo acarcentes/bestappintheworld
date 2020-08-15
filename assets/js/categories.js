@@ -20,13 +20,19 @@ var restaurantObj = [
     openNow: "",
   },
 ];
+<<<<<<< HEAD
 //2. input latitude and longitude into google place api
+=======
+
+//2. input latitude and longitude into google place api 
+>>>>>>> 73ff6eb1364ba96ff66ea87f881e121f4ab61edb
 //////////////////
 // Google Places API
 //////////////////////
 var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
 function googlePlaces(foodType) {
   var googlePlacesUrl =
+<<<<<<< HEAD
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
     lat +
     "," +
@@ -54,6 +60,46 @@ function googlePlaces(foodType) {
       console.log("dessert");
     }
   });
+=======
+  "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=1500&type=restaurant&keyword=cruise&key="+
+  googleApiKey;
+
+$.ajax({
+  url: googlePlacesUrl,
+  method: "GET",
+}).then(function (response) {
+ 
+  console.log(response);
+
+  if (foodType == "breakfast") {
+    console.log("breakfast");
+
+    var breakfastArray = [
+      "restaurant", "food"
+    ]
+  }
+
+  if (foodType == "lunch") {
+    console.log("lunch")
+
+    var lunchArray = [
+      "restaurant", "food"
+    ]
+  }
+
+  if (foodType == "dinner") {
+    console.log("dinner")
+
+    var dinnerArray = [
+      "restaurant", "nightclub", "bar"
+    ]
+  }
+
+  if (foodType == "dessert") {
+    console.log("dessert")
+  }
+});
+>>>>>>> 73ff6eb1364ba96ff66ea87f881e121f4ab61edb
 }
 // if foodTypes(from data array) is equal to the breakfast array elements make a for loop if type = breakfastArray[i] then display
 $(".container").on("click", function () {
