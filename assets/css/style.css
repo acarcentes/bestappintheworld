@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-image: url(../images/food.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-width: 100%; 
+    min-height: 100%;  
+}
+
+/**********************/
+/* navbar */
+/**********************/
+.top-bar {
+    background-color: black !important;
+}
+
+.topbar-responsive {
+    background: #2c3840;
+    padding: 1rem 1.5rem;
+  }
+  
+  .topbar-responsive .topbar-responsive-logo {
+    color: #fefefe;
+    vertical-align: middle;
+  }
+
+  
+/**********************/
+/* search bar */
+/**********************/
+.control {
+    margin: auto;
+    margin-top: 25%;
+    max-width: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex;
+}
+
+.input {
+    padding: .5%;
+    width: 40% !important;
+    opacity: 0.8;
+    box-shadow: 1px 2px 8px 2px grey !important;
+}
+
+.control p {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    right: 30.5%;
+}
+
+.control p:hover {
+    cursor: pointer;
+}
+
+/**********************/
+/* footer */
+/**********************/
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: .5%;
+    color: white;
+}
+
+/**********************/
+/* media queries  */ /* need to add these for mobile responsiveness */
+/**********************/
