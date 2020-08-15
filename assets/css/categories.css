@@ -16,10 +16,6 @@
   vertical-align: middle;
 }
 
-#search:hover {
-  cursor: pointer;
-}
-
 .top-bar-right {
   position: absolute !important;
   padding: 0% !important;
@@ -35,6 +31,9 @@
   right: 15% !important;
 }
 
+#search:hover {
+  cursor: pointer;
+}
 /**********************/
 /* image grid */
 /**********************/
