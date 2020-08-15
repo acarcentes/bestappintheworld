@@ -1,3 +1,12 @@
+// variable place holder for loader
+var loader = document.querySelector(".loader-wrapper");
+
+// while the page loads the loader icon will display
+$(window).on("load", function(){
+    // $("body").css({"overflow": "hidden"});
+    $(loader).fadeOut("slow");
+ });
+
 //1. have to get the city input from index.html
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
@@ -44,7 +53,18 @@ function googlePlaces(foodType) {
   }).then(function (response) {
     console.log(response);
 
-    // var closed = response.
+    var results = response.results[0];
+    console.log(results);
+
+    // var businessStatus = response.results[0].business_status;
+    // console.log(businessStatus)
+
+    // for (var i = 0; i < results.length; i++) {
+    //   var restaurantLength = results[i];
+      
+    // }
+
+
     // business_status: "CLOSED_TEMPORARILY"
 
     if (foodType == "breakfast") {
@@ -54,19 +74,19 @@ function googlePlaces(foodType) {
     }
 
     if (foodType == "lunch") {
-      console.log("lunch");
+      // console.log("lunch");
 
       var lunchArray = ["restaurant", "food", "establishment", "store"];
     }
 
     if (foodType == "dinner") {
-      console.log("dinner");
+      // console.log("dinner");
 
       var dinnerArray = ["restaurant", "nightclub", "bar", "store"];
     }
 
     if (foodType == "dessert") {
-      console.log("dessert");
+      // console.log("dessert");
 
       var dessertArray = ["restaurant", "bakery", "cafe"];
 
@@ -81,6 +101,7 @@ $(".cell").on("click", function(){
   googlePlaces(id);
   console.log(id);
 });
+
 // 3. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
 // filter if the business is operational
 // if type of restaurant is a bar or food place it under dinner
