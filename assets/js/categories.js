@@ -4,11 +4,13 @@
 //////////////////
 var lat = localStorage.getItem("lat", lat);
 var lng = localStorage.getItem("lng", lng);
+
 function getCityCor() {
   console.log(lat);
   console.log(lng);
 }
 getCityCor();
+
 // Restaurant object with properties
 var restaurantObj = [
   {
@@ -26,6 +28,7 @@ var restaurantObj = [
 // Google Places API
 //////////////////////
 var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
+
 function googlePlaces(foodType) {
   var googlePlacesUrl =
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
@@ -41,26 +44,32 @@ function googlePlaces(foodType) {
   }).then(function (response) {
     console.log(response);
 
+    // var closed = response.
+    // business_status: "CLOSED_TEMPORARILY"
+
     if (foodType == "breakfast") {
       console.log("breakfast");
 
-      var breakfastArray = ["restaurant", "food"];
+      var breakfastArray = ["restaurant", "food","bakery", "cafe"];
     }
 
     if (foodType == "lunch") {
       console.log("lunch");
 
-      var lunchArray = ["restaurant", "food"];
+      var lunchArray = ["restaurant", "food", "establishment", "store"];
     }
 
     if (foodType == "dinner") {
       console.log("dinner");
 
-      var dinnerArray = ["restaurant", "nightclub", "bar"];
+      var dinnerArray = ["restaurant", "nightclub", "bar", "store"];
     }
 
     if (foodType == "dessert") {
       console.log("dessert");
+
+      var dessertArray = ["restaurant", "bakery", "cafe"];
+
     }
   });
 }

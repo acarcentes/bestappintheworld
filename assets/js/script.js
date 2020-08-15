@@ -6,12 +6,10 @@ var searchButton = $("#search-button");
 //////////////////
 // EVENT LISTENER - when the search button is pressed we're storing the city input value into local storage and then transitioning to another html page
 //////////////////
+
 $(searchButton).on("click", function (event) {
   event.preventDefault();
-  // console.log("somethingsilly");
   var city = $(".input").val().trim();
-
-  // localStorage.setItem("city", city);
 
   // convert the city input into latitude and longitude coordinates for google places api
   //////////////////
@@ -29,12 +27,11 @@ $(searchButton).on("click", function (event) {
     url: geoCodingUrl,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    // console.log(response);
     console.log(response.results[0].geometry.location);
-    // console.log(response.results[0].geometry.location.lat);
     var lat = response.results[0].geometry.location.lat;
+    
     console.log(lat);
-    // console.log(response.results[0].geometry.location.lng);
     var lng = response.results[0].geometry.location.lng;
     console.log(lng);
 
