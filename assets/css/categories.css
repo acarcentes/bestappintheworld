@@ -40,9 +40,9 @@
 }
     
 .image {
-display: block;
-height: 500px;
-width: 741.5px; 
+    display: block !important;
+    height: 500px;
+    width: 741.5px !important; 
 }
 
 .hover {

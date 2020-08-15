@@ -2,8 +2,6 @@
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
-// var city = localStorage.getItem("city");
-
 var lat = localStorage.getItem("lat", lat);
 var lng = localStorage.getItem("lng", lng);
 
@@ -46,8 +44,8 @@ function googlePlaces(foodType) {
   googleApiKey;
 
 $.ajax({
-url: googlePlacesUrl,
-method: "GET",
+  url: googlePlacesUrl,
+  method: "GET",
 }).then(function (response) {
   //Clear the restaurants object arrays
   breakFastRestaurants.length = 0;
