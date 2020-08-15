@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+.top-bar-right {
+  position: absolute !important;
+  padding: 0% !important;
+  margin: 0 !important;
+  display: flex !important;
+  top: 1% !important;
+  right: 0 !important;
+  align-items: center !important;
+}
+
+#search {
+  position: absolute !important;
+  right: 15% !important;
+}
 /**********************/
 /* navbar */
 /**********************/
@@ -24,6 +38,6 @@
 /* image grid */
 /**********************/
 .cell:hover {
-    cursor: pointer;
-    opacity: 0.5;
+  cursor: pointer;
+  opacity: 0.5;
 }
