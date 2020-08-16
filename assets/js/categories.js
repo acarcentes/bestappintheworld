@@ -1,10 +1,12 @@
+//////////////////
 // LOADER
+//////////////////
 var loader = document.querySelector(".loader-wrapper");
+
 $(window).on("load", function () {
   $(loader).fadeOut("slow");
 });
 
-//1. have to get the city input from index.html
 //////////////////
 // GRABBING THE CITY INPUT FROM INDEX.HTML FILE
 //////////////////
@@ -29,7 +31,12 @@ var restaurantObj = [
   },
 ];
 
-//2. input latitude and longitude into google place api
+//  Restaurant arrays
+var breakFastRestaurants = new Array();
+var lunchRestaurants = new Array();
+var dinnerRestaurants = new Array();
+var dessertRestaurants = new Array();
+
 //////////////////
 // Google Places API
 //////////////////////
@@ -50,40 +57,36 @@ function googlePlaces(foodType) {
   }).then(function (response) {
     console.log(response);
 
-    var results = response.results[0];
-    console.log(results);
+    // var results = response.results[0];
+    // console.log(results);
 
     // var businessStatus = response.results[0].business_status;
     // console.log(businessStatus)
 
     // for (var i = 0; i < results.length; i++) {
     //   var restaurantLength = results[i];
-      
+    //   console.log(restaurantLength)
     // }
-
 
     // business_status: "CLOSED_TEMPORARILY"
 
     if (foodType == "breakfast") {
-      console.log("breakfast");
 
-      var breakfastArray = ["restaurant", "food","bakery", "cafe"];
+      var breakfastArray = ["restaurant", "food", "bakery", "cafe"];
     }
 
     if (foodType == "lunch") {
-      // console.log("lunch");
 
       var lunchArray = ["restaurant", "food", "establishment", "store"];
+
     }
 
     if (foodType == "dinner") {
-      // console.log("dinner");
 
       var dinnerArray = ["restaurant", "nightclub", "bar", "store"];
     }
 
     if (foodType == "dessert") {
-      // console.log("dessert");
 
       var dessertArray = ["restaurant", "bakery", "cafe"];
 
@@ -97,15 +100,29 @@ $(".cell").on("click", function () {
   var id = this.id.toString();
   googlePlaces(id);
   console.log(id);
+
+  if(id === "breakfast") {
+    // location.replace("restaurants.html");
+  }
+
+  if(id === "lunch") {
+    // location.replace("restaurants.html");
+  }
+
+  if(id === "dinner") {
+    // location.replace("restaurants.html");
+  }
+
+  if(id === "dessert") {
+    // location.replace("restaurants.html");
+  }
 });
 
 // 3. have to filter that array of places into our four different categories- breakfast, lunch, dinner, and dessert
 // filter if the business is operational
-// if type of restaurant is a bar or food place it under dinner
-// if type of restaurant is food place under lunch
-// 4. when you click one of the filtered selections it takes you to that pages html
-// 5. make a search bar so the user can update their city input if they want
+// 4. when you click one of the filtered selections it takes you to the restaurant pages html
 
+// 5. make a search bar so the user can update their city input if they want
 //////////////////
 // UPDATED CITY SEARCH VALUE
 //////////////////
