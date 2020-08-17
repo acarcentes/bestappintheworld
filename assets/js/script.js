@@ -27,14 +27,15 @@ $(searchButton).on("click", function (event) {
     url: geoCodingUrl,
     method: "GET",
   }).then(function (response) {
-    // console.log(response);
-    console.log(response.results[0].geometry.location);
+    // console.log(response.results[0].geometry.location);
+
     var lat = response.results[0].geometry.location.lat;
-    
     console.log(lat);
+
     var lng = response.results[0].geometry.location.lng;
     console.log(lng);
 
+    localStorage.setItem("city", city);
     localStorage.setItem("lat", lat);
     localStorage.setItem("lng", lng);
     location.replace("categories.html");

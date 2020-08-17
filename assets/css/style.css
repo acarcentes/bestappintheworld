@@ -27,30 +27,28 @@ body {
     padding: 1rem 1.5rem;
   }
   
-  .topbar-responsive .topbar-responsive-logo {
+.topbar-responsive .topbar-responsive-logo {
     color: #fefefe;
     vertical-align: middle;
-  }
+}
 
-  
 /**********************/
 /* search bar */
 /**********************/
 .control {
-    margin: auto;
-    margin-top: 25%;
-    max-width: 100% !important;
-    align-items: center !important;
-    text-align: center !important;
-    justify-content: center !important;
-    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .input {
     padding: .5%;
-    width: 40% !important;
     opacity: 0.8;
     box-shadow: 1px 2px 8px 2px grey !important;
+    width: 30vw !important;
 }
 
 .control p {
@@ -58,7 +56,8 @@ body {
     text-decoration: none;
     color: black;
     position: absolute;
-    right: 30.5%;
+    right: 1.5%;
+    top: 15.5%;
 }
 
 .control p:hover {
@@ -74,7 +73,3 @@ footer {
     bottom: .5%;
     color: white;
 }
-
-/**********************/
-/* media queries  */ /* need to add these for mobile responsiveness */
-/**********************/
