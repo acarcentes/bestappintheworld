@@ -8,31 +8,36 @@ $(window).on("load", function () {
 });
 
 //////////////////
-// Restaurant object with properties
-//////////////////
-var restaurantObj = [
-  {
-    name: "",
-    address: "",
-    rating: "",
-    locationImage: "",
-    priceLevel: "",
-    openNow: "",
-  },
-];
-
-//////////////////
 //  Restaurant arrays
 //////////////////
 var breakfastRestaurants = new Array();
-var lunchRestaurants = new Array();
-var dinnerRestaurants = new Array();
-var dessertRestaurants = new Array();
+// var lunchRestaurants = new Array();
+// var dinnerRestaurants = new Array();
+// var dessertRestaurants = new Array();
+
+var breakfastCategory = ["food", "cafe", "bakery"];
+
+//////////////////
+// GRABBING THE CITY AND LAT/LNG INPUT FROM LOCAL STORAGE
+//////////////////
+var city = localStorage.getItem("city", city);
+var lat = localStorage.getItem("lat", lat);
+var lng = localStorage.getItem("lng", lng);
+
+function getCityCor() {
+  console.log(city);
+  console.log(lat);
+  console.log(lng);
+}
+getCityCor();
 
 //////////////////
 // Google Places API
 //////////////////////
 var googleApiKey = "AIzaSyAhBVrpWoA9FUHSfRrpiB_4OOw2Crmlw-8";
+
+var restaurantResults;
+var restaurantsArray = [];
 
 function googlePlaces() {
   var googlePlacesUrl =
@@ -49,198 +54,133 @@ function googlePlaces() {
   }).then(function (response) {
     console.log(response);
 
-    for (var i = 0; i < response.results.length; i++) {
-      var restaurant = Object.create(restaurantObj);
+    var restaurantResults = response.results
 
-      if (response.results[i].name != undefined) {
-        var name = response.results[i].name;
-        restaurant.name = name;
-        console.log(name);
+    console.log(restaurantResults);
 
-        var div = $("<div>");
-        div.attr("data-name", name);
-        div.text(name);
-        $("#restaurants").append(div);
+    // var breakfastArray = ["food"];
+    // var emptyBreakfast = [];
 
+    // restaurantsArray.push(restaurantResults);
+
+    for (var i = 0; i < restaurantResults.length; i++) {
+      var element = restaurantResults[i];
+      console.log(element);
+
+      // if(savedId == "Breakfast" && restaurantResults[i].types[0] == breakfastArray) {
+      //   var wrapper = $(".wrapper");
+      //   var newRow = $("<div>").addClass("row");
+      //   var col = $("<div>").addClass("large-7 columns");
+      //   var restNameText = $("<h3>").addClass(".restaurant-name");
+      //   var rating = $("<p>")
+      //   var price = $("<p>")
+      //   var open = $("<p>")
+      //   var img = $("<img>").addClass("image-cropper")
+  
+      //   restNameText.text(element.name);
+      //   rating.text(element.rating);
+      //   price.text(element.price_level);
+      //   open.text(element.business_status);
+      //   img.att("src", element.photos[0])
+  
+      //   $(restNameText).appendTo(col);
+      //   $(rating).appendTo(col);
+      //   $(price).appendTo(col);
+      //   $(open).appendTo(col);
+      //   $(img).appendTo(col);
+      //   $(col).appendTo(newRow);
+      //   $(newRow).appendTo(wrapper);
+      // }
+
+      var wrapper = $(".wrapper");
+      var newRow = $("<div>").addClass("row");
+      var col = $("<div>").addClass("large-7 columns");
+      var restNameText = $("<h3>").addClass(".restaurant-name");
+      var address = $("<p>");
+      var rating = $("<p>");
+      var price = $("<p>");
+      var open = $("<p>");
+      var img = $("<img>").addClass("icon");
+
+      restNameText.text(element.name);
+      address.text(element.vicinity);
+      rating.text("Rating: " + element.rating);
+      price.text(element.price_level);
+
+      img.attr("src", element.icon);
+
+      $(restNameText).appendTo(col);
+      $(address).appendTo(col);
+      $(rating).appendTo(col);
+      $(price).appendTo(col);
+      $(open).appendTo(col);
+      $(img).appendTo(col);
+      $(col).appendTo(newRow);
+      $(newRow).appendTo(wrapper);
+
+      // price level conditionals
+      if (element.price_level != undefined) {
+        price.text("Price level: $");
+      } else if (element.price_level <= 1) {
+        price.text("Price level: $");
+      } else if (element.price_level <= 2) {
+        price.text("Price level: $$");
+      } else if (element.price_level <= 3) {
+        price.text("Price level: $$$");
+      } else if (element.price_level >= 4) {
+        price.text("Price level: $$$$");
+      } else if (element.price_level >= 5) {
+        price.text("Price level: $$$$$");
       } else {
-        restaurant.name = " ";
+        price.text("Price level: unknown")
       }
 
-      if (response.results[i].vicinity != undefined) {
-        var address = response.results[i].vicinity;
-        restaurant.address = address;
-        console.log(address);
-        
-        localStorage.setItem("address", address);
+      // open now conditionals
+      if (element.opening_hours != undefined) {
+        var openNow = element.opening_hours.open_now;
+        open.text("Open now: " + openNow);
       } else {
-        restaurant.address = " ";
+        open.text("Open now: unknown");
       }
+  }
 
-      if (response.results[i].rating != undefined) {
-        var rating = response.results[i].rating;
-        restaurant.rating = rating;
-        console.log(rating);
-      } else {
-        restaurant.rating = " ";
+    $(".cell").on("click", function () {
+      var id = this.id.toString();
+      console.log(id);
+
+      if(id === "Breakfast") {
+    
+        localStorage.setItem("id", id);
+        location.replace("restaurants.html");
+
       }
+    
+      if(id === "Lunch") {
+    
+        localStorage.setItem("id", id);
+        location.replace("restaurants.html");
 
-      if (response.results[i].price_level != undefined) {
-        var priceLevel = response.results[i].price_level;
-        restaurant.priceLevel = priceLevel;
-        console.log(priceLevel);
-      } else {
-        restaurant.priceLevel = " ";
       }
+    
+      if(id === "Dinner") {
+    
+        localStorage.setItem("id", id);
+        location.replace("restaurants.html");
 
-      if (response.results[i].opening_hours != undefined) {
-        var openNow = response.results[i].opening_hours.open_now;
-        restaurant.openNow = openNow;
-        console.log(openNow);
-      } else {
-        restaurant.openNow = "Closed";
       }
+    
+      if(id === "Dessert") {
+    
+        localStorage.setItem("id", id);
+        location.replace("restaurants.html");    
 
-      if (
-        response.results[i].photos.length > 0 &&
-        response.results[i].photos[0].html_attributions.length > 0
-      ) {
-        var locImage = response.results[i].photos[0].html_attributions[0];
-        restaurant.locationImage = locImage;
-        console.log(restaurant.locationImage);
-      } else {
-        restaurant.locationImage = " ";
       }
-
-      for (var j = 0; j < response.results[i].types.length; j++) {
-        if (
-          response.results[i].types[j] == "bar" ||
-          response.results[i].types[j] == "night_club" || 
-          response.results[i].types[j] == "point_of_interest"
-
-        ) {
-          dinnerRestaurants.push(restaurant);
-
-          break;
-
-        } else if (
-          response.results[i].types[j] == "restaurant" ||
-          response.results[i].types[j] == "bar" ||
-          response.results[i].types[j] == "food" ||
-          response.results[i].types[j] == "cafe" ||
-          response.results[i].types[j] == "bakery"
-
-        ) {
-          lunchRestaurants.push(restaurant);
-
-          break;
-
-        } else if (
-          response.results[i].types[j] == "restaurant" ||
-          response.results[i].types[j] == "food" ||
-          response.results[i].types[j] == "cafe" ||
-          response.results[i].types[j] == "store" ||
-          response.results[i].types[j] == "bakery"
-
-        ) {
-          breakfastRestaurants.push(restaurant);
-          lunchRestaurants.push(restaurant);
-          dessertRestaurants.push(restaurant);
-
-          break;
-        }
-      }
-    }
+    });
   });
 }
 
-$(".cell").on("click", function () {
-  var id = this.id.toString();
-  googlePlaces(id);
-  console.log(id);
+googlePlaces();
 
-  if(id === "Breakfast") {
-
-    var id = localStorage.setItem("id", id);
-
-  
-    for (var i = 0; i < breakfastRestaurants.length; i++) {
-      // console.log(breakfastRestaurants[i]);
-
-      if (breakfastRestaurants.length == 0) {
-        alert("There are no breakfast restaurants in " + city);
-        return;
-      }
-      // Create HTML components from the breakfast restaurants object array
-
-      var name = $("<h3>").text(breakfastRestaurants.name)
-
-          // var address = breakfastRestaurants.address
-      // var rating = breakfastRestaurants.rating
-
-      // var price = breakfastRestaurants.priceLevel
-      // var open = breakfastRestaurants.openNow
-      // var image = breakfastRestaurants.locationImage
-
-    }
-
-    // location.replace("restaurants.html");
-
-  }
-
-  if(id === "Lunch") {
-
-    var id = localStorage.setItem("id", id);
-
-    for (var i = 0; i < lunchRestaurants.length; i++) {
-      console.log(lunchRestaurants[i]);
-
-      if (lunchRestaurants.length == 0) {
-        alert("There are no lunch restaurants in " + city);
-        return;
-      }
-
-    }
-
-  }
-
-  if(id === "Dinner") {
-
-    var id = localStorage.setItem("id", id);
-
-    for (var i = 0; i < dinnerRestaurants.length; i++) {
-      console.log(dinnerRestaurants[i]);
-
-      if (dinnerRestaurants.length == 0) {
-        alert(
-          "There are no dinner restaurants in " + city
-        );
-        return;
-      }
-
-    }
-  }
-
-  if(id === "Dessert") {
-
-    var id = localStorage.setItem("id", id);
-
-    for (var i = 0; i < dessertRestaurants.length; i++) {
-      console.log(dessertRestaurants[i]);
-
-      if (dessertRestaurants.length == 0) {
-        alert(
-          "There are no dessert restaurants in " + city
-        );
-        return;
-      }
-  
-    }
-  }
-
-});
-
-// 4. when you click one of the filtered selections it takes you to the restaurant pages html
-// 5. make a search bar so the user can update their city input if they want
 //////////////////
 // UPDATED CITY SEARCH VALUE
 //////////////////
@@ -270,18 +210,3 @@ $("#search").click(function () {
     location.replace("categories.html");
   });
 });
-
-
-//////////////////
-// GRABBING THE CITY AND LAT/LNG INPUT FROM LOCAL STORAGE
-//////////////////
-var city = localStorage.getItem("city", city);
-var lat = localStorage.getItem("lat", lat);
-var lng = localStorage.getItem("lng", lng);
-
-function getCityCor() {
-  console.log(city);
-  console.log(lat);
-  console.log(lng);
-}
-getCityCor();
