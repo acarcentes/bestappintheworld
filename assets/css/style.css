@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-image: url(../images/food.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-width: 100%; 
+    min-height: 100%;  
+}
+
+/**********************/
+/* navbar */
+/**********************/
+.top-bar {
+    background-color: black !important;
+}
+
+.topbar-responsive {
+    background: #2c3840;
+    padding: 1rem 1.5rem;
+  }
+  
+.topbar-responsive .topbar-responsive-logo {
+    color: #fefefe;
+    vertical-align: middle;
+}
+
+/**********************/
+/* search bar */
+/**********************/
+.control {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.input {
+    padding: .5%;
+    opacity: 0.8;
+    box-shadow: 1px 2px 8px 2px grey !important;
+    width: 30vw !important;
+}
+
+.control p {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    right: 1.5%;
+    top: 15.5%;
+}
+
+.control p:hover {
+    cursor: pointer;
+}
+
+/**********************/
+/* footer */
+/**********************/
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: .5%;
+    color: white;
+}
