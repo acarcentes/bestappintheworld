@@ -26,12 +26,34 @@
 /**********************/
 .top-bar {
     background-color: black !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: .8px  !important;
+    -webkit-box-align: center !important;
+    max-width: 100%;
   }
   
 .topbar-responsive .topbar-responsive-logo {
     color: #fefefe;
     vertical-align: middle;
+    line-height: inherit !important;
   }
+
+b, strong {
+  font-weight: 700;
+  line-height: inherit !important;
+}
+
+.top-bar-title {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 0 auto !important;
+  -ms-flex: 0 0 auto !important;
+  flex: 0 0 auto !important;
+  margin: .5rem 1rem .5rem 0 !important;
+  display: block !important;
+  margin-left: -90.5% !important;
+}
 
 .top-bar-right {
     position: absolute !important;
@@ -55,3 +77,45 @@
 /**********************/
 /* restaurants */
 /**********************/
+h1 {
+  padding: 1%;
+}
+
+#alert {
+  padding: 1%;
+}
+
+.row {
+  max-width: 100% !important;
+  padding: 1%;
+}
+
+.large-7.columns {
+  background-color: white;
+  box-shadow: 1px 2px 8px 2px grey !important;
+  width: 100%;
+}
+
+.icon {
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: right;
+  margin-top: -11.3%;
+  margin-right: 2%;
+  box-shadow: 1px 2px 8px 2px grey !important;
+}
+
+#maps {
+  position: absolute;
+  right: 0%;
+  width: 41vw;
+  padding: 1%;
+  padding-top: 0%;
+}
+
+h1 {
+  text-transform: uppercase;
+}

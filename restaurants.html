@@ -4,15 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/restaurants.css">
+
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous">
+
+    <!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-prototype.min.css" integrity="sha256-BiKflOunI0SIxlTOOUCQ0HgwXrRrRwBkIYppEllPIok=" crossorigin="anonymous">
+
+    <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-rtl.min.css" integrity="sha256-F+9Ns8Z/1ZISonBbojH743hsmF3x3AlQdJEeD8DhQsE=" crossorigin="anonymous">
+
     <!-- Foundation Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    
     <!-- Foundation Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" type="text/css" href="./assets/css/restaurants.css">
-
     <title>Restaurants</title>
   </head>
   <body>
@@ -38,21 +51,18 @@
     </div>
     </nav>
 
-    <h1>Search results for <span id="foodCategory"></span> in <span id="location"></span></h1>
-
-
-    <div id="restaurants">
-      <!-- business name -->
-      <!-- business icon or photo-->
-      <!-- business rating -->
-      <!-- price level -->
-      <!-- business address -->
-      <!-- open now -->
+    <!-- Food category and Location Header -->
+    <div id="alert">
+      <h1>Search results for <span id="foodCategory"></span> in <span id="location"></span></h1>      
     </div>
 
-  <!-- jQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./assets/js/categories.js"></script>
-  <script src="./assets/js/restaurants.js"></script> 
+    <!-- Restaurants container -->
+    <div class="wrapper"></div>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./assets/js/restaurants.js"></script> 
+<script src="./assets/js/categories.js"></script>
+<!-- <script src="./assets/js/test.js"></script> -->
 </body>
 </html>
