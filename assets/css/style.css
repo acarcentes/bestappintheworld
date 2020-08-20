@@ -32,6 +32,10 @@ body {
     vertical-align: middle;
 }
 
+.topbar-responsive .topbar-responsive-logo-right {
+    horizontal-align: right;
+}
+
 /**********************/
 /* search bar */
 /**********************/

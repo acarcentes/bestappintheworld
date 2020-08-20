@@ -1,0 +1,14 @@
+@use '@material/button/mdc-button';
+@use '@material/button';
+@import "@material/image-list/mdc-image-list";
+
+.foo-button {
+  @include button.container-fill-color(darksalmon);
+}
+
+body {
+  color: blue;
+}
+@use "@material/card";
+
+@include card.core-styles;
